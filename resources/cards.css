@@ -1,0 +1,110 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden; /* Запрещаем прокрутку всей страницы по умолчанию */
+}
+
+/* Основная обертка страницы */
+.page-container {
+  display: flex;
+  flex-direction: row;
+  height: 100vh; /* вся высота окна браузера */
+  width: 100%;
+}
+
+/* Заголовки */
+h3 {
+  margin-top: 0;
+  margin-bottom: 10px; /* или другой необходимый размер */
+}
+
+/* Левая колонка с фильтрами */
+.filters-column {
+  width: 30%;
+  height: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  overflow: auto; /* при необходимости, прокрутка фильтров */
+  border-right: 1px solid #ccc;
+  background: #fff;
+  /* По умолчанию отображается на больших экранах */
+}
+
+/* Правая колонка с карточками */
+.cards-column {
+  width: 70%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  box-sizing: border-box;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Обертка для карточек, которая скроллится */
+.cards-container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  overflow-y: auto; /* прокрутка только карточек */
+}
+
+/* Карточки вакансий */
+.job-card {
+  background: #f9f9f9;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  padding: 15px;
+}
+
+/* Медиазапрос для мобильных устройств */
+@media (max-width: 768px) {
+  /* Обеспечиваем прокрутку всей страницы */
+  html, body {
+    overflow: auto;
+  }
+
+  /* Меняем направление контейнера */
+  .page-container {
+    flex-direction: column;
+    height: auto;
+  }
+
+  /* Кнопка для мобильных устройств — показываем */
+  #toggle-filters {
+   display: block;
+  }
+
+  /* Фильтры по умолчанию скрыты */
+  .filters-column {
+    display: none; /* скрываем по умолчанию */
+    width: 100%;
+    height: auto;
+    border-right: none;
+    border-bottom: 1px solid #ccc;
+    padding: 10px 20px;
+  }
+
+  /* Показываем фильтры, когда есть класс show */
+  .filters-column.show {
+    display: block;
+  }
+
+  /* Основная часть с карточками */
+  .cards-column {
+    width: 100%;
+    flex: 1; /* растягивается по высоте */
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Контейнер карточек — растягивается и становится прокручиваемым */
+  .cards-container {
+    flex: 1; /* занимает всё доступное пространство внутри .cards-column */
+    overflow-y: auto; /* включаем вертикальную прокрутку */
+    background-color: #eef; /* для визуальной проверки */
+  }
+}

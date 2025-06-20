@@ -1,0 +1,181 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+  font-size: 14px;
+  line-height: 1.4;
+  background-color: #fafafa;
+}
+
+.date-banner {
+  background-color: #e0e0e0;
+  width: 100%;
+  padding: 8px 20px;
+  font-size: 12px;
+  text-align: left;
+  box-sizing: border-box;
+  font-weight: normal;
+  margin-bottom: 10px;
+}
+
+form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+form label {
+  margin: 5px 10px;
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+}
+form select {
+  padding: 4px 8px;
+  font-size: 14px;
+  margin-top: 4px;
+  min-width: 150px;
+  width: 220px;
+}
+button {
+  display: none;
+}
+.reset-link {
+  align-self: center;
+  margin-left: 10px;
+  font-size: 14px;
+  text-decoration: none;
+  color: #007bff;
+}
+.reset-link:hover {
+  text-decoration: underline;
+}
+
+.table-wrapper {
+  overflow-x: auto;
+  cursor: grab;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 1000px;
+  font-size: 13px;
+  white-space: normal;
+}
+th, td {
+  border: 1px solid #ccc;
+  padding: 8px;
+  text-align: left;
+  word-break: keep-all;
+  white-space: normal;
+}
+th {
+  background-color: #f0f0f0;
+}
+tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+tbody tr:nth-child(odd) {
+  background-color: #fff;
+}
+a {
+  color: #0066cc;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+tbody tr:hover {
+  background-color: #c0c0c0;
+}
+
+/* Мобильная адаптация */
+@media (max-width: 768px) {
+  body {
+    font-size: 12px;
+  }
+  form {
+    flex-direction: column;
+    align-items: center;
+  }
+  form label {
+    flex-direction: row;
+    align-items: center;
+  }
+  form select {
+    margin-left: 5px;
+  }
+}
+
+input[type="text"] {
+  padding: 4px 8px;
+  font-size: 14px;
+  margin-top: 4px;
+  min-width: 150px;
+  width: 220px;
+}
+
+.checkbox-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 20px;
+}
+
+.checkbox-column span {
+  margin-bottom: 8px;
+}
+
+.reset-button {
+  margin-top: 8px;
+  display: inline-block;
+  padding: 10px 15px;
+  background-color: #007bff; /* Цвет фона, можно изменить */
+  color: #fff; /* Цвет текста */
+  border: none; /* Убираем границы */
+  border-radius: 4px; /* Скругление углов, по желанию */
+  font-weight: bold;
+  transition: background-color 0.3s; /* Плавное изменение цвета при наведении */
+  float: right;
+}
+
+.reset-button:hover {
+  background-color: #0056b3; /* Цвет при наведении */
+}
+
+.pagination-search-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.search-box {
+  flex: 1;
+  max-width: 300px;
+}
+.search-box input[type="text"] {
+  width: 100%;
+  padding: 4px 8px;
+  font-size: 14px;
+}
+
+.pagination-and-range {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin-left: 20px;
+}
+
+.range-info {
+  font-size: 14px;
+  margin-top: 5px;
+  text-align: right;
+}
+
+html, body {
+  margin: 0;
+  padding-left: 10px;
+  padding-right: 10px;
+  min-height: 100%;
+  box-sizing: border-box;
+}

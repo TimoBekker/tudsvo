@@ -1,0 +1,127 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+  font-size: 14px;
+  line-height: 1.4;
+  background-color: #fafafa;
+}
+
+.date-banner {
+  background-color: #e0e0e0;
+  width: 100%;
+  padding: 8px 20px;
+  font-size: 12px;
+  text-align: left;
+  box-sizing: border-box;
+  font-weight: normal;
+  margin-bottom: 10px;
+}
+
+form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+form label {
+  margin: 5px 10px;
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+}
+form select {
+  padding: 4px 8px;
+  font-size: 14px;
+  margin-top: 4px;
+  min-width: 150px;
+}
+button {
+  display: none;
+}
+.reset-link {
+  align-self: center;
+  margin-left: 10px;
+  font-size: 14px;
+  text-decoration: none;
+  color: #007bff;
+}
+.reset-link:hover {
+  text-decoration: underline;
+}
+
+.table-wrapper {
+  overflow-x: auto;
+  cursor: grab;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 1000px;
+  font-size: 13px;
+  white-space: normal;
+}
+th, td {
+  border: 1px solid #ccc;
+  padding: 8px;
+  text-align: left;
+  word-break: keep-all;
+  white-space: normal;
+}
+th {
+  background-color: #f0f0f0;
+}
+tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+tbody tr:nth-child(odd) {
+  background-color: #fff;
+}
+a {
+  color: #0066cc;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+tbody tr:hover {
+  background-color: #f2f2f2;
+}
+
+/* Мобильная адаптация */
+@media (max-width: 768px) {
+  body {
+    font-size: 12px;
+  }
+  form {
+    flex-direction: column;
+    align-items: center;
+  }
+  form label {
+    flex-direction: row;
+    align-items: center;
+  }
+  form select {
+    margin-left: 5px;
+  }
+}
+
+.search-field {
+  display: flex;
+  flex-direction: column;
+  margin: 5px 10px;
+  font-size: 14px;
+  font-family: Arial, sans-serif;
+  align-items: flex-start;
+}
+
+.search-field input[type="text"] {
+  margin: 5px 0px;
+  
+  font-size: 14px;
+  min-width: 300px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  height: calc(1.4em + 8px);
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
